@@ -1,50 +1,23 @@
-// const cities = ["Stockholm", "Malmö", "London", "New York"];
-// console.log(cities)
-// cities[2] = "Glasgow";
-// console.log(cities[2]); // Glasgow
+function multiply(num1, num2) {
+  // code to solve the question
 
-// const cities = ["Stockholm", "Malmö", "London", "New York"];
-// const sthlmExists = cities.includes("Lund");
-// console.log(sthlmExists) // true
+  // create variable that holds the multiplication
+  const result = num1 * num2;
 
-// if (cities.includes("Stockholm")) {
-//     console.log("Stockholm exists!");
-// }
-
-// const numbers = [4, 10, 32, 2, 3, 99];
-
-// const indexOf32 = numbers.indexOf(32);
-// console.log(indexOf32);
-
-// const cars = ["Volvo", "Saab", "Audi", "Ford", "Mercedes", "BMW"]
-// console.log(cars)
-
-// cars.pop()
-
-// console.log(cars)
-// // ["Volvo", "Saab", "Audi", "Ford", "Mercedes"], 
-
-// const removedCar = cars.pop()
-// console.log(removedCar) // "Mercedes"
-// console.log(cars)
-
-// const cars = ["Volvo", "Saab", "Opel"];
-
-// for (let i = 0; i < cars.length; i++) {
-//   console.log(cars[i]);
-// }
-
-// const cars = ["Volvo", "Saab", "Opel"];
-
-// for (let car of cars) {
-//   console.log(car);
-// }
-
-const car = {
-    color: "Silver",
-    model: "V70",
-    make: "Volvo",
-    year: 2016
+  // return the value
+  return result;
 }
 
-console.log(car);
+function calculate(num1, num2, operator) {
+  if (operator === "+") {
+    return num1 + num2;
+  } else if (operator === "-") {
+    return num1 - num2;
+  } else if (operator === "/") {
+    return num1 / num2;
+  } else if (operator === "*") {
+    return num1 * num2;
+  }
+
+  return undefined;
+}
