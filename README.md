@@ -65,11 +65,11 @@ cities[2] = "Glasgow";
 console.log( cities[2] ); // Glasgow
 ```
 
-#### Array methods
+#### Simple Array methods
 
-#### `includes()`
+#### `includes(element) => boolean`
 
-Checks if a value exists or not in an array. Will return `true` or `false`.
+Checks if a value exists or not in an array. Takes an argument which is the element we are searching for, and it will return `true` or `false`.
 
 ```js
 const cities = ["Stockholm", "Malmö", "London", "New York"];
@@ -79,7 +79,7 @@ console.log(sthlmExists) // true
 
 ```
 
-#### `indexOf()`
+#### `indexOf(element) => number`
 
 Finds the index of the element you are searching for, or not. Returns the index if it finds it, otherwise it will return -1.
 
@@ -90,4 +90,83 @@ const indexOf32 = numbers.indexOf(32);
 console.log(indexOf32); // 2
 ```
 
-#### 
+#### `push(newElement, newElement1...) => number`
+
+This method adds an element/item to the array, at the end. it takes one or more argumnets an  returns the new length of the array. Observe, the return value in this method is rarely used.
+
+```js
+const cars = ["Volvo", "Saab", "Audi"];
+
+// Add "Ford" to the array;
+cars.push("Ford");
+
+console.log(cars) // ["Volvo", "Saab", "Audi", "Ford"]
+
+// Add "Mercedes" and "BMW" in one go
+cars.push("Mercedes", "BMW");
+
+console.log(cars)
+// ["Volvo", "Saab", "Audi", "Ford", "Mercedes", "BMW"]
+```
+
+#### `pop() => element/item `
+
+Pop removes the last element of the array, and returns that element. Return value is rarely used here as well.
+
+```js
+const cars = ["Volvo", "Saab", "Audi", "Ford", "Mercedes", "BMW"]
+
+cars.pop()
+
+console.log(cars)
+// ["Volvo", "Saab", "Audi", "Ford", "Mercedes"], 
+
+const removedCar = cars.pop()
+console.log(removedCar) // "Mercedes"
+```
+
+Array methods/functions are used daily when working as a developer. You don't have to know them all but you should know that they exist and can help you solve entire problems or parts of the problems.
+
+### Looping through arrays
+
+The most basic way to loop through an array is with a `for-of..loop` of a `for-loop` with index. 
+
+#### `for-loop` with index.
+
+Syntax: `for ( initialValue; condition; change) { codeblock}`
+
+A more common usage of the syntax is like this;
+
+```js
+for (let i = 0; i < 10; i++) {
+    // Code to execute each loop.
+}
+```
+
+Let's see with an example
+
+```js
+const cars = ["Volvo", "Saab", "Opel"];
+
+for (let i = 0; i < cars.length; i++) {
+    console.log(cars[i])
+}
+```
+
+This loop is great when we want to do something that includes the index of each element in the array.
+
+But if we don't need the index value, we can just use the other for loop that exists, the `for-of.. loop`.
+
+Syntax `for (let variable 'of' array)`
+
+```js
+const cars = ["Volvo", "Saab", "Opel"];
+
+for (let car of cars) {
+    console.log(car)
+}
+```
+
+This loop is more common because there is no risk to loop over elements that doens't exist, and the syntax is clearer and mor readable.
+
+### Objects

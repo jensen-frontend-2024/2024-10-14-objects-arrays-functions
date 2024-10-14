@@ -11,7 +11,31 @@
 //     console.log("Stockholm exists!");
 // }
 
-const numbers = [4, 10, 32, 2, 3, 99];
+// const numbers = [4, 10, 32, 2, 3, 99];
 
-const indexOf32 = numbers.indexOf(32);
-console.log(indexOf32);
+// const indexOf32 = numbers.indexOf(32);
+// console.log(indexOf32);
+
+// const cars = ["Volvo", "Saab", "Audi", "Ford", "Mercedes", "BMW"]
+// console.log(cars)
+
+// cars.pop()
+
+// console.log(cars)
+// // ["Volvo", "Saab", "Audi", "Ford", "Mercedes"], 
+
+// const removedCar = cars.pop()
+// console.log(removedCar) // "Mercedes"
+// console.log(cars)
+
+// const cars = ["Volvo", "Saab", "Opel"];
+
+// for (let i = 0; i < cars.length; i++) {
+//   console.log(cars[i]);
+// }
+
+const cars = ["Volvo", "Saab", "Opel"];
+
+for (let car of cars) {
+  console.log(car);
+}
