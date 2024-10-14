@@ -170,3 +170,122 @@ for (let car of cars) {
 This loop is more common because there is no risk to loop over elements that doens't exist, and the syntax is clearer and mor readable.
 
 ### Objects
+
+#### Defining objects
+
+Think of an object as a "thing" that exists in the real world. A car, a house, a boat, a person, a student, a teacher, a coach. Let's take a car for example.
+
+```js
+const carColor = "Silver";
+const carModel = "V70";
+const carMake = "Volvo"
+const year = 2016;
+
+console.log( carColor, carModel, carMake, year);
+```
+
+This is annoying, so many variables to handle. Why? Let's create an object instead!
+
+```js
+const car = {
+    color: "Silver",
+    model: "V70",
+    make: "Volvo",
+    year: 2016,
+}
+
+console.log(car);
+```
+
+So we collect values that relate to eachother and put them in an object that we can use. Let's do a house for instance.
+
+```js
+const house = {
+    color: "green",
+    floors: 2,
+    size: 400,
+    hasBasement: false,
+    hasAttic: true,
+    address: "Drottinggatan 10, Stockholm"
+}
+```
+
+Above we have a house with different attributes of different types. The address is a string but it contains detailed information of the address that could be put in their own attributes, like `street`, `streetNumber` and `city` in this case. But we can also put them in their own object. This is called nested objects, or object nesting.
+
+```js
+const myAddress = {
+    street: "Drottinggatan",
+    streetNumber: 10,
+    city: "Stockholm",
+}
+```
+
+Now put this `myAddress` inside the house object.
+
+```js
+const house = {
+    color: "green",
+    floors: 2,
+    size: 400,
+    hasBasement: false,
+    hasAttic: true,
+    address: myAddress
+}
+```
+
+An object can also includ arrays. Let's update the color attribute
+
+```js
+const house = {
+    color: ["green", "white", "black"],
+    floors: 2,
+    size: 400,
+    hasBasement: false,
+    hasAttic: true,
+    address: myAddress
+}
+```
+
+#### Editing objects
+
+To edit objects we can use two syntaxes, what is called dot-notation and the other one doesn't have name but I call the "array-like-syntax".
+
+`dot-notation`
+
+We have a house, we want to update the floors value.
+
+```js
+const house = {
+    color: ["green", "white", "black"],
+    floors: 2,
+    size: 400,
+    hasBasement: false,
+    hasAttic: true,
+}
+
+house.floors = 3;
+
+console.log(house) // the floor value will be 3.
+
+// This wil also work
+
+house.floors = "four";
+
+// Changing type is okay but not recommended.
+```
+
+`Array-like-sytax` _( in lack of a better term)_
+
+```js
+const house = {
+    color: ["green", "white", "black"],
+    floors: 2,
+    size: 400,
+    hasBasement: false,
+    hasAttic: true,
+}
+
+house["size"] = 500;
+```
+
+When using the array-like-syntax it has to be a string, even though we don't add "strings" as keys in the object. Keys are the name of the attributes _( to the left )_ and values are the values of the attritbues _( to the right )_. They are commonly called key/value-pairs.

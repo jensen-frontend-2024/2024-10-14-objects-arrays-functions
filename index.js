@@ -34,8 +34,17 @@
 //   console.log(cars[i]);
 // }
 
-const cars = ["Volvo", "Saab", "Opel"];
+// const cars = ["Volvo", "Saab", "Opel"];
 
-for (let car of cars) {
-  console.log(car);
+// for (let car of cars) {
+//   console.log(car);
+// }
+
+const car = {
+    color: "Silver",
+    model: "V70",
+    make: "Volvo",
+    year: 2016
 }
+
+console.log(car);
