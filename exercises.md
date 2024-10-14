@@ -23,14 +23,36 @@ function calculate(num1, num2, operator) {
   } else if (operator === "*") {
     return num1 * num2
   }
-
-  return undefined;
 }
 
 // return-nyckelordet terminerar ( tvångsavslutar ) alltid funktionen oavsett om det kommer kod efteråt.
 ```
 
-3. 
+3. Utgå ifrån denna array:
+
+```js
+const numbers = [3, 6, 10, 55, 7, 32, 99];
+```
+
+Skapa en funktion som retunerar medelvärdet av alla dessa nummer.
+
+```
+medelvärdet = totala värdet / antalet värden
+```
+
+```js
+function average (arrayOfNumbers){
+    let totalValue = 0;
+
+    for (let number of arrayOfNumbers) {
+        totalValue = totalValue + number;
+        // totalValue += number; // same as above
+    }
+
+    const average  = totalValue / arrayOfNumbers.length
+    return average;
+}
+```
 
 ---
 

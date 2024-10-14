@@ -18,6 +18,16 @@ function calculate(num1, num2, operator) {
   } else if (operator === "*") {
     return num1 * num2;
   }
+}
 
-  return undefined;
+function average(arrayOfNumbers) {
+  let totalValue = 0;
+
+  for (let number of arrayOfNumbers) {
+    totalValue = totalValue + number;
+    // totalValue += number; // same as above
+  }
+
+  const average = totalValue / arrayOfNumbers.length;
+  return average;
 }
